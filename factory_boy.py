@@ -26,10 +26,11 @@ class Profile:
         self.planet = planet
 
     def __str__(self):
-        return '%s %s (%s)' % (
+        return '%s: %s %s (%s)' % (
+            self.gender,
             self.firstname,
             self.lastname,
-            self.account.username,
+            self.account.username
         )
 
 
