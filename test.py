@@ -2,25 +2,15 @@ from factory_boy import AccountFactory, ProfileFactory, FemaleProfileFactory
 
 
 if __name__ == "__main__":
-	print(AccountFactory.create())
-	print(AccountFactory.create())
-	print(AccountFactory.create())
-	print(AccountFactory.create())
-	print("*******************")
-	print(ProfileFactory.create())
-	print(ProfileFactory.create())
-	print(ProfileFactory.create())
-	print(ProfileFactory.create())
-	print(ProfileFactory.create())
-	print(ProfileFactory.create())
-	print("*******************")
-	print(FemaleProfileFactory.create())
-	print(FemaleProfileFactory.create())
-	print(FemaleProfileFactory.create())
-	print(FemaleProfileFactory.create())
 
-	print(FemaleProfileFactory.create())
-	print(FemaleProfileFactory.create())
-	print(FemaleProfileFactory.create())
-	print(FemaleProfileFactory.create())
-	
+	accounts = AccountFactory.create_batch(6)
+	for account in accounts:
+		print(account)
+	print("*******************")
+	profiles = ProfileFactory.create_batch(6)
+	for profile in profiles:
+		print(profile)
+	print("*******************")
+	female_profiles = FemaleProfileFactory.create_batch(8)
+	for female_prfile in female_profiles:
+		print(female_prfile)
